@@ -1,0 +1,17 @@
+This program converts a given string to uppercase using character manipulation.
+#include <stdio.h>
+#include <ctype.h>
+
+void to_uppercase(char *str) {
+    while (*str) {
+        *str = toupper((unsigned char) *str);
+        str++;
+    }
+}
+
+int main() {
+    char text[] = "hello, world!";
+    to_uppercase(text);
+    printf("Uppercase: %s\n", text);
+    return 0;
+}
